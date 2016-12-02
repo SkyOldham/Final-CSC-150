@@ -34,7 +34,7 @@ int main()
 void printIntro()
 {
 	cout << "Welcome to College Intramurals." << endl;
-	cout << "The Team Of Talanted Developers Are: Orion Hidy, Sky Oldon, Keaton Harpan" << endl;
+	cout << "The Team Of Talanted Developers Are: Orion Hidy, Sky Oldham, Keaton Harpan, and Aarron Wilson" << endl;
 	cout << "At any time press -1 to exit and -2 to go back a step." << endl;
 }
 
