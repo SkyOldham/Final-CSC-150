@@ -1,4 +1,3 @@
-#include "main.h"
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -13,7 +12,7 @@ void decision(int trunk,int branch,int stick);
 int main()
 {
 	top:
-	
+
 	printIntro();
 
 	decision(23,23,23);
@@ -60,7 +59,7 @@ void decision(int trunk,int branch,int stick)
 	int leveldeciding = 0;
 
 	bool endaction = false;
-	
+
 	string options[8];
 
 	switch(trunk)
@@ -118,7 +117,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "End Action Basketball -> Roster -> All Team View" << endl;
+							cout << "Team 1 = Ball is Life" << "\n" << "Team 2 = Wildcats" << "\n" << "Team 3 = Blue Devils" << "\n";
 							endaction = true;
 						break;
 
@@ -189,7 +188,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "End Action Baseball -> Roster -> All Teams View" << endl;
+							cout << "Team 1 = Going Going Gone" << "\n" << "Team 2 = Jeters Never Prosper" << "\n" << "Team 3 = Honey Nut Ichiros" << "\n";
 							endaction = true;
 						break;
 
@@ -201,7 +200,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 					}
 					//Get a team and display roster
-						
+
 				break;
 
 				case nochoiceyet:
@@ -237,7 +236,7 @@ void decision(int trunk,int branch,int stick)
 
 	cin >> currentdecision;
 
-	
+
 
 	if((currentdecision >= 0) && (currentdecision < amountofoptions))
 	{
@@ -284,5 +283,3 @@ void decision(int trunk,int branch,int stick)
 		decision(nochoiceyet,nochoiceyet,nochoiceyet);
 	}
 }
-
-
