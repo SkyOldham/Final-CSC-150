@@ -24,7 +24,7 @@ void decision(int trunk,int branch,int stick);
 int main()
 {
 	top:
-
+	
 	printIntro();
 
 	decision(23,23,23);
@@ -45,7 +45,6 @@ int main()
 void printIntro()
 {
 	cout << "Welcome to College Intramurals." << endl;
-	cout << "The Team Of Talanted Developers Are: Orion Hidy, Sky Oldham, Keaton Harpan, and Aarron Wilson" << endl;
 	cout << "At any time press -1 to exit and -2 to go back a step." << endl;
 }
 
@@ -56,6 +55,7 @@ void decision(int trunk,int branch,int stick)
 
 	const int statsbranch = 0;
 	const int rosterbranch = 1;
+	const int schedulebranch = 2;
 
 	const int playerind = 0;
 	const int playertotal = 1;
@@ -71,7 +71,7 @@ void decision(int trunk,int branch,int stick)
 	int leveldeciding = 0;
 
 	bool endaction = false;
-
+	
 	string options[8];
 
 	switch(trunk)
@@ -129,7 +129,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "Team 1 = Ball is Life" << "\n" << "Team 2 = Wildcats" << "\n" << "Team 3 = Blue Devils" << "\n";
+							cout << "End Action Basketball -> Roster -> All Team View" << endl;
 							endaction = true;
 						break;
 
@@ -143,12 +143,18 @@ void decision(int trunk,int branch,int stick)
 					}
 				break;
 
+				case schedulebranch:
+					cout << "End Action Basketball -> Schedule" << endl;
+					endaction = true;
+				break;
+
 				case nochoiceyet:
 					leveldeciding = 1;
-					amountofoptions = 2;
+					amountofoptions = 3;
 
 					options[0] = "Stats";
 					options[1] = "Roster";
+					options[2] = "Schedule";
 				break;
 			}
 		break;
@@ -200,7 +206,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "Team 1 = Going Going Gone" << "\n" << "Team 2 = Jeters Never Prosper" << "\n" << "Team 3 = Honey Nut Ichiros" << "\n";
+							cout << "End Action Baseball -> Roster -> All Teams View" << endl;
 							endaction = true;
 						break;
 
@@ -209,10 +215,16 @@ void decision(int trunk,int branch,int stick)
 							amountofoptions = 2;
 							options[0] = "Team Rosters";
 							options[1] = "All Team View";
+							options[2] = "Schedule";
 						break;
 					}
 					//Get a team and display roster
+						
+				break;
 
+				case schedulebranch:
+					cout << "End Action Baseball -> Schedule" << endl;
+					endaction = true;
 				break;
 
 				case nochoiceyet:
@@ -248,7 +260,7 @@ void decision(int trunk,int branch,int stick)
 
 	cin >> currentdecision;
 
-
+	
 
 	if((currentdecision >= 0) && (currentdecision < amountofoptions))
 	{
