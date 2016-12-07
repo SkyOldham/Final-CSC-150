@@ -1,7 +1,7 @@
 /*
     Program Authors: Sky Oldham, Aaron Wilson, Orion Hidy, Keaton Harpham
     Program Date: 11/28/16
-    Program Description:  This program is used to keep track of college intramural sports.
+    Program Description: This program is used to keep track of college intramural sports.
 
    Our Algorithm
    1)
