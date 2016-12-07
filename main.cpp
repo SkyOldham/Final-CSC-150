@@ -24,7 +24,7 @@ void decision(int trunk,int branch,int stick);
 int main()
 {
 	top:
-	
+
 	printIntro();
 
 	decision(23,23,23);
@@ -71,7 +71,7 @@ void decision(int trunk,int branch,int stick)
 	int leveldeciding = 0;
 
 	bool endaction = false;
-	
+
 	string options[8];
 
 	switch(trunk)
@@ -129,7 +129,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "End Action Basketball -> Roster -> All Team View" << endl;
+							cout << "Team 1: Ball is Life\n" << "Team 2: Wildcats\n" << "Team 3: Blue Devils\n";
 							endaction = true;
 						break;
 
@@ -144,7 +144,9 @@ void decision(int trunk,int branch,int stick)
 				break;
 
 				case schedulebranch:
-					cout << "End Action Basketball -> Schedule" << endl;
+					cout << "Week 1\n" << "Ball is Life vs. Wildcats\n" << "Blue Devils BYE\n"
+                        << "Week 2\n" << "Wildcats vs. Blue Devils\n" << "Ball is Life BYE\n"
+                        << "Week 3\n" << "Ball is Life vs. Blue Devils\n" << "Wildcats BYE\n";
 					endaction = true;
 				break;
 
@@ -206,7 +208,7 @@ void decision(int trunk,int branch,int stick)
 						break;
 
 						case allteamviewstick:
-							cout << "End Action Baseball -> Roster -> All Teams View" << endl;
+							cout << "Team 1: Going Going Gone\n" << "Team 2: Jeters Never Prosper\n" << "Team 3: Honey Nut Ichiros\n";
 							endaction = true;
 						break;
 
@@ -219,20 +221,23 @@ void decision(int trunk,int branch,int stick)
 						break;
 					}
 					//Get a team and display roster
-						
+
 				break;
 
 				case schedulebranch:
-					cout << "End Action Baseball -> Schedule" << endl;
+					cout << "Week 1\n" << "Jeters Never Prosper vs. Honey Nut Ichiros\n" << "Going Going Gone BYE\n"
+                        << "Week 2\n" << "Going Going Gone vs. Jeters Never Prosper\n" << "Honey Nut Ichiros BYE\n"
+                        << "Week 3\n" << "Going Going Gone vs. Honey Nut Ichiros\n" << "Jeters Never Prosper BYE\n";
 					endaction = true;
 				break;
 
 				case nochoiceyet:
-					amountofoptions = 2;
 					leveldeciding = 1;
+					amountofoptions = 3;
 
 					options[0] = "Stats";
 					options[1] = "Roster";
+					options[2] = "Schedule";
 				break;
 			}
 		break;
@@ -260,7 +265,7 @@ void decision(int trunk,int branch,int stick)
 
 	cin >> currentdecision;
 
-	
+
 
 	if((currentdecision >= 0) && (currentdecision < amountofoptions))
 	{
