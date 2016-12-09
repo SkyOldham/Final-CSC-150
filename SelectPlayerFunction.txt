@@ -119,7 +119,7 @@ int selectPlayer(bool baseball)
 					}
 				}
 			}
-
+			playerreader.close();
 			for(int i = 0;i < 10;i ++)
 			{
 				if(playerids[i] == -1)
