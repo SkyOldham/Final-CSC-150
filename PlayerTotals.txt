@@ -1,0 +1,101 @@
+void playerTotals(bool baseball)
+{
+	fstream reader("BasketballGames_3.txt",ios::in);
+
+	string current,info,id;
+	int playerselection;
+	bool readplayer;
+
+	if(baseball)
+	{
+
+	}
+	else
+	{
+		playerselection = selectPlayer(false);
+		stringstream sp;
+		sp << playerselection;
+		int totalrebounds,assists,turnovers,fgmade,threeatt,threemade,points;
+		totalrebounds = assists = turnovers = fgmade = threeatt = threemade = points = 0;
+
+		cout << "About to read file" << endl;
+
+		int a = 0;
+		while(!(reader.eof()))
+		{
+			
+			getline(reader,current,'\n');
+
+			info = current.substr(11);
+			id = current.substr(0,11);
+			
+			if(id.compare("Player-----") == 0)
+			{
+				if(info.compare(sp.str()) == 0)
+				{
+					readplayer = true;
+				}
+				else
+				{
+					readplayer = false;
+				}
+			}
+			else if(id.compare("Points-----") == 0)
+			{
+				if(readplayer)
+				{
+					points += stoi(info);
+				}	
+			}
+			else if(id.compare("Assists----") == 0)
+			{
+				if(readplayer)
+				{
+					assists += stoi(info);
+				}
+			}
+			else if(id.compare("Rebounds---") == 0)
+			{
+				if(readplayer)
+				{
+					totalrebounds += stoi(info);
+				}
+			}
+			else if(id.compare("Fgmade-----") == 0)
+			{
+				if(readplayer)
+				{
+					fgmade += stoi(info);
+				}
+			}
+			else if(id.compare("Threeatt---") == 0)
+			{
+				if(readplayer)
+				{
+					threeatt += stoi(info);
+				}
+			}
+			else if(id.compare("Threemade--") == 0)
+			{
+				if(readplayer)
+				{
+					threemade += stoi(info);
+				}
+			}
+			else if(id.compare("Turnovers--") == 0)
+			{
+				if(readplayer)
+				{
+					turnovers += stoi(info);
+				}
+			}
+
+		}
+
+		//totalrebounds,assists,turnovers,fgmade,threeatt,threemade,points;
+		cout << "Points   Rebounds    Assists    Turnovers    Fgmade    threeatt    threemade" << endl;
+		cout << "----------------------------------------------------------------------------" << endl << endl;
+		cout << setw(9) << left << points << setw(12) << left << totalrebounds << setw(11)  << left << assists << setw(13) << left << turnovers << setw(10) << left << fgmade <<
+		left << setw(12) << threeatt << setw(9) << left << threemade << endl;
+	}
+}
