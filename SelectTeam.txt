@@ -1,0 +1,78 @@
+int selectTeam(bool baseball)
+{
+		string playersfilename;
+		string teamsfilename;
+
+		if(baseball)
+		{
+			playersfilename = baseballplayers;
+			teamsfilename = baseballteams;
+		}
+		else
+		{
+			playersfilename = basketballplayers;
+			teamsfilename = basketballteams;
+		}
+	
+		int selectedteam = 0;
+		int selectedplayer = 0;
+		
+		int ids[10];
+		int idindex = 0;
+		string names[10];
+		int nameindex = 0;
+
+		//Opens the correct files
+		fstream teamreader(teamsfilename,ios::in);
+		
+		string currentline;
+		string identifier;
+		string info;
+
+		int currentid = 0;
+		string currentname;
+		
+		//Read team options
+		if(!(teamreader.fail()))
+		{
+			while(!(teamreader.eof()))
+			{
+				getline(teamreader,currentline,'\n');
+				identifier = currentline.substr(0,6);
+				info = currentline.substr(6);
+
+				if(identifier.compare("ID----") == 0)
+				{
+					ids[idindex] = stoi(info);
+					idindex ++;
+				}
+				else if(identifier.compare("Name--") == 0)
+				{
+					names[nameindex] = info;
+					nameindex ++;
+				}
+			}
+
+			teamreader.close();
+		}
+		else
+		{
+			cout << "Team file not found" << endl;
+		}
+
+		for(int i = 0;i < 10;i ++)
+		{
+			if(names[i].compare("") == 0)
+			{
+				break;
+			}
+
+			cout << "Option" << (i + 1) << " :" << ids[i];
+			cout << "Name" << names[i] << endl;
+		}
+
+		cout << "Enter the Team ID" << endl;
+
+		cin >> selectedteam;
+	return selectedteam;
+}
