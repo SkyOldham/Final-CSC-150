@@ -1,4 +1,4 @@
-Team2---JetersNeverProsper	Team1---GoingGoingGone	    Team1---GoingGoingGone
+Team2---JetersNeverProsper  Team1---GoingGoingGone	Team1---GoingGoingGone
 Team3---HoneyNutIchiros	    Team2---JetersNeverProsper	Team3---HoneyNutIchiros
         
 Team2               Team1               Team1 
