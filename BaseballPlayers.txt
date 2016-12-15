@@ -2,18 +2,53 @@ Team1[0] = Going Going Gone - ID 0-8
 Team2[1] = Jeters Never Prosper - ID 9-17
 Team3[2] = Honey Nut Ichiros - ID 18-26
 
-ID0 =Bob
-ID1 =Tom
-ID2 =Billy
-ID3 =Joe
-ID4 =Kyle
-ID5 =Kenny
-ID6 =Cartmen
-ID7 =Stan
-ID8 =Evan
-ID9 =Bowen
-ID10 =Tyler
-ID11 =Riley
+ID----0
+Name--Bob
+TeamID0
+
+ID----1
+Name--Tom
+TeamID0
+
+ID----2
+Name--Billy
+TeamID0
+
+ID----3
+Name--Joe
+TeamID0
+
+ID----4
+Name--Kyle
+TeamID0
+
+ID----5
+Name--Kenny
+TeamID0
+
+ID----6
+Name--Cartmen
+TeamID0
+
+ID----7
+Name--Stan
+TeamID0
+
+ID----8 
+Name--Evan
+TeamID0
+
+ID----9 
+Name--Bowen
+TeamID1
+
+ID----10 
+Name--Tyler
+TeamID1
+
+ID----11
+Name--Riley
+TeamID1
 
 ID----12
 Name--Chris
